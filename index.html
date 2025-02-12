@@ -3,63 +3,114 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Chaitanya Varma - DevOps Engineer</title>
+    <title>Guna Chaitanya Varma Manthena - DevOps Engineer</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
     <style>
-        /* Global Styles */
+        /* General Styles */
         body {
-            font-family: 'Arial', sans-serif;
+            font-family: 'Poppins', sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f4f4f4;
+            background: #f8f9fa;
             color: #333;
-            text-align: center;
         }
 
-        header {
-            background-color: #2c3e50;
+        /* Navbar */
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 40px;
+            background: #2c3e50;
+            color: white;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            transition: 0.3s ease-in-out;
+        }
+
+        .navbar a {
+            color: white;
+            text-decoration: none;
+            font-weight: 600;
+            padding: 8px 15px;
+            transition: 0.3s;
+        }
+
+        .navbar a:hover {
+            background: #3498db;
+            border-radius: 5px;
+        }
+
+        /* Hero Section */
+        .hero {
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            background: linear-gradient(to right, #2c3e50, #3498db);
             color: white;
             padding: 40px;
-            font-size: 24px;
-            font-weight: bold;
+        }
+
+        .hero h1 {
+            font-size: 50px;
+            margin: 0;
             animation: fadeIn 1.5s ease-in-out;
         }
 
-        section {
-            max-width: 800px;
-            margin: 20px auto;
+        .hero p {
+            font-size: 18px;
+            margin-top: 10px;
+            animation: fadeIn 2s ease-in-out;
+        }
+
+        /* Sections */
+        .section {
+            max-width: 900px;
+            margin: 50px auto;
             background: white;
-            padding: 20px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            padding: 30px;
             border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
             opacity: 0;
             transform: translateY(30px);
             animation: slideUp 1s ease-out forwards;
         }
 
         h2 {
-            color: #3498db;
+            color: #2c3e50;
         }
 
-        .project {
+        /* Projects */
+        .projects .project {
             background: #eef2f3;
             padding: 15px;
-            margin: 10px 0;
+            margin: 15px 0;
             border-radius: 8px;
-            box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
             transition: transform 0.3s ease-in-out;
         }
 
-        .project:hover {
-            transform: scale(1.03);
+        .projects .project:hover {
+            transform: scale(1.05);
+            background: #dbe9f4;
         }
 
-        a {
+        /* Footer */
+        .footer {
+            text-align: center;
+            padding: 20px;
+            background: #2c3e50;
+            color: white;
+            margin-top: 50px;
+        }
+
+        .footer a {
             color: #3498db;
             text-decoration: none;
-        }
-
-        a:hover {
-            text-decoration: underline;
         }
 
         /* Animations */
@@ -76,16 +127,31 @@
 </head>
 <body>
 
-    <header>
-        Chaitanya Varma - DevOps Engineer 🚀
-    </header>
+    <!-- Navbar -->
+    <div class="navbar">
+        <div>🚀 Chaitanya Varma</div>
+        <div>
+            <a href="#about">About</a>
+            <a href="#skills">Skills</a>
+            <a href="#projects">Projects</a>
+            <a href="#contact">Contact</a>
+        </div>
+    </div>
 
-    <section>
+    <!-- Hero Section -->
+    <div class="hero">
+        <h1>Chaitanya Varma</h1>
+        <p>DevOps Engineer | AWS | Azure | Kubernetes | CI/CD | AI/ML Deployments</p>
+    </div>
+
+    <!-- About Section -->
+    <div id="about" class="section">
         <h2>About Me</h2>
-        <p>I am a DevOps Engineer with 3 years of experience specializing in **Cloud Infrastructure, CI/CD Pipelines, Automation, and AI/ML-powered application deployments**.</p>
-    </section>
+        <p>I am a DevOps Engineer with 3 years of experience specializing in **AWS, Kubernetes, Jenkins, Terraform, and CI/CD automation** for AI/ML-powered and standard applications.</p>
+    </div>
 
-    <section>
+    <!-- Skills Section -->
+    <div id="skills" class="section">
         <h2>Skills</h2>
         <p>✅ **Cloud Platforms**: AWS, Azure  
            ✅ **CI/CD**: Jenkins, Azure DevOps, AWS CodePipeline  
@@ -93,11 +159,11 @@
            ✅ **Infrastructure as Code**: Terraform, CloudFormation  
            ✅ **Monitoring**: Prometheus, Grafana, ELK Stack  
         </p>
-    </section>
+    </div>
 
-    <section>
-        <h2>Projects & Experience</h2>
-
+    <!-- Projects Section -->
+    <div id="projects" class="section projects">
+        <h2>Projects</h2>
         <div class="project">
             <h3>AI/ML Application Deployment</h3>
             <p>Automated deployment and management of AI/ML-powered applications using **Azure DevOps & Kubernetes**.</p>
@@ -112,33 +178,20 @@
             <h3>Infrastructure Automation</h3>
             <p>Automated cloud infrastructure deployment using **Terraform & CloudFormation**, reducing manual efforts by 60%.</p>
         </div>
+    </div>
 
-        <div class="project">
-            <h3>Cloud Monitoring & Logging</h3>
-            <p>Implemented **centralized logging and monitoring** using **Prometheus, Grafana, and ELK Stack** for improved system visibility.</p>
-        </div>
-
-    </section>
-
-    <section>
+    <!-- Contact Section -->
+    <div id="contact" class="section">
         <h2>Contact</h2>
-        <p>📩 Email: <a href="mailto:chaitanyavarma@example.com">chaitu0095@gmail.com</a></p>
+        <p>📩 Email: chaitu0095@gmail.com</p>
         <p>🔗 LinkedIn: <a href="https://www.linkedin.com/in/chaitanya-varma-bb3003246/" target="_blank">linkedin.com/in/chaitanya-varma-bb3003246/</a></p>
         <p>📂 GitHub: <a href="https://github.com/yourusername" target="_blank">github.com/ChaitanyaVarma707</a></p>
-    </section>
+    </div>
 
-    <script>
-        // Fade-in animation for all sections
-        document.addEventListener("DOMContentLoaded", function() {
-            let sections = document.querySelectorAll("section");
-            sections.forEach((section, index) => {
-                setTimeout(() => {
-                    section.style.opacity = "1";
-                    section.style.transform = "translateY(0)";
-                }, index * 300);
-            });
-        });
-    </script>
+    <!-- Footer -->
+    <div class="footer">
+        <p>Designed by Chaitanya Varma | <a href="https://github.com/ChaitanyaVarma707">GitHub</a></p>
+    </div>
 
 </body>
 </html>
